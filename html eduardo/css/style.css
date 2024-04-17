@@ -1,68 +1,130 @@
-body{
-    margin: 0;
+/* reset */
+body {
+	margin: 0;
 }
 
-html{
-    font-family: "Glass Antiqua", cursive;
-}
-
-h1 h2 h3 h4 h5 p span{
-    margin: 0;
-    color: #666;
+/* geral */
+html {
+	font-family: 'Open Sans', sans-serif;
 }
 
 
-
-.cointaner{
-    max-width: 1920px;
-    width: 100%;
+h1, h2, h3, h4, h5, p, span {
+	margin: 0;
+	color: #666;
 }
 
-header{
+.container {
+	max-width: 1920px;
+	width: 100%;
+}
+
+/* header */
+header {
+	position: relative;
+	top: 0;
+	height: auto;
+	width: 100%;
+}
+
+/* navbar */
+nav { 
+	position: fixed;
+	top: 0;
+	height: 100px;
+	width: 100%;
+	z-index: 1;
+	background-color: #FFF;
+	border-bottom: 1px solid #CCC;
+ }
+
+nav:after {
+ 	clear: both;
+ 	content: "";
+ 	display: block;
+ 	height: 50px;
+ 	width: 50px;
+ 	background-color: #000;
+ }
+
+ .nav-container {
+ 	max-width: 1200px;
+ 	position: relative;
+ 	margin-right: auto;
+ 	margin-left: auto; 	
+ }
+
+  #logo {
+ 	width: 50px;
+ 	height: 50px;
+ 	margin-top: 25px;
+ }
+
+ .nav-container ul {
+ 	float: right;
+ 	height: 100px;
+ 	line-height: 100px;
+ 	margin: 0;
+ }
+
+ .nav-container li {
+ 	list-style: none;
+ 	float: left;
+ 	margin: 0 15px;
+ }
+
+ .nav-container li a {
+ 	text-decoration: none;
+ 	color: #666;
+ 	transition: .5s;
+ }
+
+ .nav-container li a:hover {
+ 	color: #3381F3;
+ }
+
+ #main-banner{
+    background-color:red;
+    background:url("../imagem/banner6.jpg")no-repeat;
+    background-size:cover;
+    background-position:0 55%;
+    position:relative;
+    margin-top:100px;
+}
+    #search-form{
     position: relative;
-    top: 0;
-    height: auto;
-    width: 100%;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:15em;
+    padding-bottom:15em;
+    Text-align:center;
+}
+#search-form h1{
+font-size: 40px;
+}
+#search-form p{
+margin-top:30px;
+margin-bottom:60px;
+font-size:18px;
+font-weight:300px;
 }
 
-nav{
-    position: fixed;
-    top: 0;
-    height: 100px;
-    width: 100%;
-    z-index: 1;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-}
+/*formulário*/
 
-nav:after{
-clear: soth;
-content: "";
-display: block;
-height: 50px;
-width: 50px;
-background-color: #000;
+#search-form input,
+    #search-form select{
+    background-color:#fff;
+    border-radius:5px;
+    border-color:transparent;
+    padding:10px 20px;
+    font-size:18px;
+    Margin:0 10px;
 }
-
-.nav-container{
-    float: right;
-    height: 100px;
-    
-    margin: 0px;
-}
-
-.nav-container li{
-    list-style: none;
-    float: left;
-    margin: 0 15px;
-}
-
-.nav-container li a{
-    text-decoration: none;
-    color: #666;
-    transition: .5s;
-}
-
-.nav-container li a:hover{
-    color: #3381F3;
+    #search-form input [type=submit]{
+    background-color:#3381f3;
+    text-transform:uppercase;
+    color:#fff;
+    cursor:pointer;
+    transition:0.5s;
 }
